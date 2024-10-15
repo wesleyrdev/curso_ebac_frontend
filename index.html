@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Agenda de Contatos</h1>
+
+    <form id="formContato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" required>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <table id="tabelaContatos">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As linhas serão adicionadas aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        // Adiciona um evento de submit ao formulário
+        document.getElementById('formContato').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Obtém os valores do formulário
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+
+            // Cria uma nova linha na tabela
+            const tabela = document.getElementById('tabelaContatos').getElementsByTagName('tbody')[0];
+            const novaLinha = tabela.insertRow();
+
+            // Insere as células na nova linha
+            const celulaNome = novaLinha.insertCell(0);
+            const celulaTelefone = novaLinha.insertCell(1);
+            celulaNome.textContent = nome;
+            celulaTelefone.textContent = telefone;
+
+            // Limpa os campos do formulário
+            document.getElementById('formContato').reset();
+        });
+    </script>
+
+</body>
+</html>
