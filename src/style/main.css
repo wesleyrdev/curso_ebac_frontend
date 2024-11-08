@@ -1,0 +1,58 @@
+body {
+    font-family: "Roboto", system-ui;
+  }
+  .section-title {
+    color: #ffffff;
+    font-family: "Pacifico", cursive;
+  }
+  .title {
+      color: #000;
+  }
+  .navbar-brand:hover {
+    color: inherit; /* Impede mudança de cor no hover */
+    text-decoration: none; /* Remove qualquer decoração ao passar o mouse */
+  }
+  #cabecalho {
+    background-color: #181c14;
+    color: #ecdfcc;
+  }
+  
+  .nav-link,
+  .nav-link:hover {
+    color: #90908f;
+  }
+  .nav .nav-link.active {
+    background-color: #343a32b5;
+    color: #ecdfcc; /* Mesma cor para hover */
+  }
+  .text-colored {
+    color: #acb9a8;
+  }
+  #noticias, #sobre {
+    background-color: #8e9289;
+    
+  }
+  .social-links li {
+    display: inline;
+    list-style: none;
+  }
+  .social-links li a {
+    text-decoration: none;
+  }
+  
+  #fale-conosco {
+    background-color: #181c14;
+  }
+  
+  #fale-conosco {
+    font-family: "Pacifico", cursive;
+    color: #ffffff;
+  }
+  
+  #eventos, #produtos {
+    background-color: #dff2df;
+  }
+  
+  .btn:hover{
+    color: #000000;
+  }
