@@ -1,0 +1,102 @@
+/* Configurações básicas */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu de Navegação */
+.menu {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.menu ul li {
+    display: inline;
+}
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.menu ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Seção Sobre a Loja */
+.sobre-loja {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+.sobre-loja .imagem-loja,
+.sobre-loja .texto-loja {
+    flex: 1;
+}
+.sobre-loja img {
+    width: 100%;
+    height: auto;
+}
+
+/* Seção de Produtos */
+.produtos {
+    padding: 20px;
+}
+.lista-produtos {
+    display: grid;
+    gap: 20px;
+}
+.produto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.produto img {
+    width: 100%;
+    height: auto;
+}
+.produto button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.produto button:hover {
+    background-color: #218838;
+}
+
+/* Layout Mobile (até 640px) */
+@media (max-width: 640px) {
+    .sobre-loja {
+        flex-direction: column;
+    }
+    .lista-produtos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Layout Tablet (de 641px até 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .lista-produtos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Layout Desktop (a partir de 1024px) */
+@media (min-width: 1024px) {
+    .lista-produtos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
